@@ -1,0 +1,150 @@
+<?php
+session_start();
+
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+if (!isset($_SESSION['university_id'])) {
+    header("Location: student_auth.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking Subscription</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'navbar.php';?>
+
+
+<!-- Title Section -->
+<section class="hero small-hero">
+    <h1>Select Your Parking Plan</h1>
+    <p>Choose the plan that fits your needs and confirm your registration.</p>
+</section>
+
+<!-- Plans -->
+<section class="cards">
+
+    <!-- Monthly Plan -->
+    <div class="card plan-card">
+        <h3>Monthly Plan</h3>
+        <p class="price">$20</p>
+
+        <ul>
+            <li>✔ Valid for 30 days</li>
+            <li>✔ Standard parking access</li>
+            <li>✔ Easy renewal</li>
+        </ul>
+
+        <button class="btn blue"   onclick="subscribe('Monthly')">
+            Subscribe
+        </button>
+    </div>
+
+    <!-- Semester Plan -->
+    <div class="card plan-card">
+        <h3>Semester Plan</h3>
+        <p class="price">$70</p>
+
+        <ul>
+            <li>✔ Valid for full semester</li>
+            <li>✔ Priority parking</li>
+            <li>✔ Best value</li>
+        </ul>
+
+        <button class="btn green"  onclick="subscribe('Semester')">
+            Subscribe
+        </button>
+    </div>
+
+</section>
+
+<!-- Confirmation Box -->
+<div id="resultBox" class="result-box"></div>
+
+<div id="loadingSpinner" class="loading-overlay hidden">
+
+    <div class="spinner-box">
+
+        <div class="spinner"></div>
+
+        <p>Please wait...</p> </div>
+</div>
+
+<!-- Script -->
+<script>
+function subscribe(plan) {
+
+    // Fake payment confirmation
+    let confirmPay = confirm("Proceed with payment for " + plan + " plan?");
+    
+    if (!confirmPay) return;
+	showLoading();
+
+    fetch('/university_system/php/subscribe.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'plan=' + plan
+    })
+    .then(res => res.text())
+    .then(data => {
+		setTimeout(()=> {
+	document.getElementById("loadingSpinner").classList.add("hidden");},1000);
+	
+     const box = document.getElementById("resultBox");
+
+    let formatted = data.replace(/\n/g, "<br>");
+
+    if (data.includes("⚠️")) {
+        box.innerHTML = `<div style="color: orange; font-weight: bold;">${formatted}</div>`;
+    } 
+    else if (data.includes("Successful")) {
+
+    formatted = formatted.replace( "✅ Parking Registration Successful",  "" );
+
+    box.innerHTML = `
+    <div style="color: green; font-weight: bold;">
+        ✅ Parking Registration Successful 
+        ${formatted}
+    </div>`;
+}
+    else {
+        box.innerHTML = formatted;
+    }
+});
+}
+
+
+// 🔥 Load saved subscription when page opens
+window.onload = function () {
+    fetch('/university_system/php/get_subscription.php')
+    .then(res => res.text())
+    .then(data => {
+        if (data !== "no_subscription") {
+            document.getElementById("resultBox").innerHTML = data.replace(/\n/g, "<br>");
+        }
+    });
+};
+
+
+
+function showLoading(button = null, text = "Please wait...") {
+
+    document.getElementById("loadingSpinner").classList.remove("hidden");
+
+    if (button) {
+
+        button.disabled = true;
+
+        button.innerText = text;
+    }
+}
+</script>
+
+</body>
+</html>

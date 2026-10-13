@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Parking & Bus Registration System</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">University Parking & Bus Registration System</div>
+	
+    <nav>
+	
+    <a href="#"><i class="fa fa-parking"></i> Parking</a>
+    <a href="#"><i class="fa fa-bus"></i> Bus Transportation</a>
+    <a href="#"><i class="fa-solid fa-id-badge"></i> Driver Portal</a>
+    <a href="#"><i class="fa fa-lock"></i> Admin</a>
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <span class="badge">Welcome to Our University</span>
+    <h1>University Parking and <br> Bus Registration System</h1>
+    <p>
+        A unified platform for students, drivers, and administrators to manage 
+        parking subscriptions and bus transportation services with ease.
+        Choose your portal below to get started.
+    </p>
+</section>
+
+<!-- Cards Section -->
+<section class="cards">
+
+    
+    <!-- Student Portal -->
+<div class="card">
+<div class="icon icon-blue">
+        <i class="fa-solid fa-user-graduate"></i>
+    </div>
+
+    <h3>Student Transportation Management</h3>
+
+    <p>
+        Access university transportation and parking services
+        from one centralized student portal.
+    </p><br>
+
+    <a href="/university_system/student/student_auth.php"
+       class="btn blue">
+
+       Access Student Portal
+
+    </a>
+
+    <div class="features blue-box">
+
+        <p>
+            <i class="fa-solid fa-circle-check"></i>
+            Bus transportation services
+        </p>
+
+        <p>
+            <i class="fa-solid fa-circle-check"></i>
+            Parking subscriptions
+        </p>
+
+        <p>
+            <i class="fa-solid fa-circle-check"></i>
+            Unified student dashboard
+        </p>
+
+    </div>
+
+</div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="icon icon-green"><i class="fa fa-id-badge"></i></div>
+        <h3>Driver Portal</h3>
+        <p>Access your assigned bus schedule and student pickup lists.</p><br><br>
+		<a href="driver/driver_login.html" class="btn green">Access Portal</a>
+       
+        
+		<div class="features green-box">
+    <p><i class="fa-solid fa-circle-check"></i> View trip schedules</p>
+    <p><i class="fa-solid fa-circle-check"></i> Student lists by village</p>
+    <p><i class="fa-solid fa-circle-check"></i> Secure driver access</p>
+</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="icon icon-orange"><i class="fa fa-lock"></i></div>
+        <h3>Admin Control Panel</h3>
+        <p>System administration panel for managing users and routes.</p><br><br>
+       <a href="admin/admin_login.php" class="btn orange">Admin Login</a>
+        
+		<div class="features orange-box">
+    <p><i class="fa-solid fa-circle-check"></i> Manage bus lines</p>
+    <p><i class="fa-solid fa-circle-check"></i> Monitor subscriptions</p>
+    <p><i class="fa-solid fa-circle-check"></i> System configuration</p>
+</div>
+    </div>
+
+</section>
+
+</body>
+</html>

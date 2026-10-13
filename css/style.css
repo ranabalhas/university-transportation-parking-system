@@ -1,0 +1,1188 @@
+* {margin:0;
+   padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #0b1c3d;
+    color: white;
+}
+
+.navbar a {
+    color: #ddd;
+    margin-left: 20px;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0d2c6c, #081a3a);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #ccc;
+}
+
+.badge {
+    background: #1d4ed8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Card Style */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	transition: 0.5s;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card:active {
+	 transform: translateY(-10px);
+}
+
+
+	
+
+/* Icons */
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.icon-green{
+	background:#10b981;
+	color:white;
+}
+.icon-blue{
+    background:#2563eb;
+    color:white;
+}
+
+.icon-purple{
+    background:#7c3aed;
+    color:white;
+}
+
+.icon-orange{
+    background:#f97316;
+    color:white;
+}
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+	border:none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn.blue { background: #2563eb; }
+.btn.green { background: #10b981; }
+.btn.purple { background: #7c3aed; }
+.btn.orange { background: #f97316; }
+
+/* List */
+.card ul {
+    margin-top: 10px;
+	
+}
+
+.card ul li {
+	list-style: none;
+    padding-left: 0;
+    font-size: 13px;
+    margin: 5px 0;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.navbar a {
+    color: #ddd;
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.navbar a i {
+    font-size: 14px;
+}
+
+
+/* Feature box (the gray rounded shape) */
+.features {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #f3f4f6;
+}
+
+/* Text inside */
+.features p {
+    font-size: 13px;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icons */
+.features i {
+    font-size: 14px;
+}
+
+/* Colored LEFT border like image */
+.blue-box {
+    border-left: 4px solid #2563eb;
+}
+
+.green-box {
+    border-left: 4px solid #10b981;
+}
+
+.purple-box {
+    border-left: 4px solid #7c3aed;
+}
+
+.orange-box {
+    border-left: 4px solid #f97316;
+}
+
+/* Match icon color with theme */
+.blue-box i { color: #2563eb; }
+.green-box i { color: #10b981; }
+.purple-box i { color: #7c3aed; }
+.orange-box i { color: #f97316; }
+
+
+/* ===== AUTH PAGES (LOGIN & REGISTER) ===== */
+
+.auth-body {
+    background:linear-gradient(135deg, #0d2c6c, #081a3a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.auth-container {
+	
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.auth-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Hide register initially */
+.hidden {
+    display: none;
+}
+
+/* Title */
+.auth-box h2 {
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Inputs */
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+	border:none;
+    border-bottom: 2px solid #ccc;
+	outline:none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.auth-box input:focus {
+    border-bottom: 2px solid #2563eb;
+}
+
+/* Switch text */
+.switch-text {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.switch-text a {
+    color: #2563eb;
+	text-decoration:none;
+    font-weight: 500;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #0d2c6c, #081a3a);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .auth-box {
+        padding: 30px 20px;
+    }
+}
+
+
+
+.lines-list {
+    list-style: none;
+    padding: 0;
+}
+
+.lines-list li {
+    margin: 10px 0;
+}
+
+.lines-list a {
+    display: block;
+    padding: 12px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.lines-list a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+
+
+/* ===== PARKING SUBSCRIPTION PAGE ===== */
+
+.small-hero {
+    padding: 40px 20px;
+}
+
+.plan-card {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Price style */
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #111;
+}
+
+/* Result box (confirmation message) */
+.result-box {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 15px;
+    background: #e0f7f1;
+    border-left: 5px solid #10b981;
+    border-radius: 8px;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+
+
+/* ===== TOAST NOTIFICATION ===== */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #ef4444;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 12px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 45px 10px 10px; /* space for icon */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Eye icon */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password:hover {
+    color: #000;
+}
+
+.village-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Each row */
+.village-item {
+    display: flex;              /* 🔥 THIS FIXES ALIGNMENT */
+    align-items: center;        /* vertical alignment */
+    gap: 10px;                  /* space between radio and text */
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+/* Hover effect */
+.village-item:hover {
+    background: #f3f4f6;
+}
+
+/* Radio button size */
+.village-item input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Selected state */
+.village-item input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #2563eb;
+}
+.village-item span {
+    display: inline;
+}
+.village-list {
+    direction: ltr;
+}
+
+.village-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.village-item span {
+    display: inline;
+}
+
+.village-item input {
+    width: auto;
+}
+
+
+.dashboard-box {
+    width: 100%;
+    max-width: 600px;
+}
+
+.bus-card {
+    background: #f8f9ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.bus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.trip-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.result-msg {
+    padding: 10px;
+    border-radius: 6px;
+    background: #e0f7f1;
+    border-left: 4px solid #10b981;
+    margin-bottom: 10px;
+}
+
+
+/* ===== BUS SYSTEM UI UPGRADE ===== */
+
+/* Page container wider */
+.dashboard-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Subscription cards */
+.subscription-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-left: 5px solid #2563eb;
+}
+
+.subscription-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header inside card */
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Line title */
+.line-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0d2c6c;
+}
+
+/* Trip time */
+.trip-time {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Day badge */
+.day-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    background: #e0ecff;
+    color: #2563eb;
+    margin-top: 5px;
+}
+
+/* Expiry */
+.expiry {
+    font-size: 13px;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* ===== TRIPS (bus_recommend) ===== */
+
+.trip-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.trip-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Trip row */
+.trip-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Time */
+.trip-time-big {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+/* Seats */
+.seats {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Progress bar */
+.progress {
+    height: 6px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #10b981;
+}
+
+/* Full state */
+.full {
+    background: #ef4444 !important;
+}
+
+/* Subscribe button smaller */
+.btn-small {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+/* Success + error box */
+.resultBox {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.local-msg {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.bus-dashboard .auth-container,
+.bus-recommend .auth-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.bus-dashboard .auth-body,
+.bus-recommend .auth-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d2c6c, #081a3a);
+}
+.bus-dashboard .auth-box,
+.bus-recommend .auth-box {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+}
+.bus-dashboard .auth-btn,
+.bus-recommend .auth-btn {
+    width: auto;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+.bus-dashboard .trip-card,
+.bus-recommend .trip-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bus-recommend {
+    
+background:  linear-gradient(135deg, #0d2c6c, #081a3a);}
+
+.bus-dashboard .auth-box{
+	
+	box-shadow: 0 6px 18px rgba(8, 26, 58, 0.4);
+	
+}
+
+/* =========================================
+   STUDENT PORTAL
+========================================= */
+
+.student-portal{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* NAVBAR */
+
+.portal-navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:#0f172a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.portal-logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.portal-nav{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.portal-nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.portal-nav a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.portal-hero{
+    height:420px;
+    background:url('../images/student-bg.jpg') center/cover no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:22px;
+}
+
+/* CARDS */
+
+.portal-cards{
+    width:90%;
+    margin:auto;
+    margin-top:-70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+    padding-bottom:50px;
+    position:relative;
+    z-index:5;
+}
+
+
+
+.portal-card{
+    background:white;
+    border-radius:18px;
+    padding:90px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.portal-card:hover{
+    transform:translateY(-5px);
+}
+
+.portal-icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.blue{
+    background:#2563eb;
+}
+
+.green{
+    background:#16a34a;
+}
+
+.orange{
+    background:#ea580c;
+}
+
+.purple{
+    background:#7c3aed;
+}
+
+.portal-card h3{
+    margin-bottom:15px;
+}
+
+.portal-card p{
+    color:#555;
+    line-height:1.7;
+    min-height:90px;
+}
+
+/* BUTTONS */
+
+.portal-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 22px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.portal-btn:hover{
+    opacity:0.9;
+}
+
+.blue-btn{
+    background:#2563eb;
+}
+
+.green-btn{
+    background:#16a34a;
+}
+
+.orange-btn{
+    background:#ea580c;
+}
+
+.purple-btn{
+    background:#7c3aed;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.portal-navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.hero-content h1{
+    font-size:36px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+}
+/* =========================================
+   PORTAL PAGES LAYOUT
+========================================= */
+
+.portal-page{
+
+    margin:0;
+    font-family:Arial, sans-serif;
+
+    background:
+    linear-gradient(rgba(7,20,45,0.82),
+    rgba(7,20,45,0.82)),
+    url('../images/student-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+}
+
+/* CENTER CONTENT UNDER NAVBAR */
+
+.portal-content{
+
+    width:100%;
+    min-height:calc(100vh - 90px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+/* BETTER FIND BUS BOX */
+
+.portal-content .auth-box{
+
+    width:100%;
+    max-width:500px;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* =========================================
+   DRIVER PORTAL NAVBAR
+========================================= */
+
+.driver-navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    background:#0b1c3d;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.driver-logo{
+
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.driver-menu{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.driver-menu a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.driver-menu a:hover{
+
+    color:#38bdf8;
+}
+
+.driver-info{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-left:20px;
+}
+
+.driver-info span{
+
+    color:white;
+    font-size:14px;
+}
+
+.line-badge{
+
+    background:#2563eb;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.logout-btn{
+
+    background:#dc2626;
+    padding:10px 16px;
+    border-radius:8px;
+}
+
+.logout-btn:hover{
+
+    background:#ef4444;
+    color:white !important;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+.driver-navbar{
+
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.driver-menu{
+
+    justify-content:center;
+}
+
+.driver-info{
+
+    flex-direction:column;
+}
+
+}
+
+/* =========================
+   LOADING SPINNER
+========================= */
+
+.loading-overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.85);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.spinner-box {
+
+    text-align: center;
+}
+
+.spinner {
+
+    width: 60px;
+    height: 60px;
+
+    border: 6px solid #dbeafe;
+
+    border-top: 6px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+    margin: auto;
+}
+
+.spinner-box p {
+
+    margin-top: 15px;
+
+    color: #0b2d5c;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+.hidden {
+
+    display: none !important;
+}
+
+@keyframes spin {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* =========================
+   LOADING SPINNER
+========================= */
+
+.loading-overlay {
+
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background: rgba(255,255,255,0.75);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    backdrop-filter: blur(3px);
+}
+
+.hidden {
+    display:none;
+}
+
+.spinner-box {
+
+    text-align:center;
+
+    background:white;
+
+    padding:30px 40px;
+
+    border-radius:16px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.spinner {
+
+    width:55px;
+    height:55px;
+
+    border:5px solid #dbeafe;
+
+    border-top:5px solid #2563eb;
+
+    border-radius:50%;
+
+    animation: spin 0.8s linear infinite;
+
+    margin:auto;
+    margin-bottom:15px;
+}
+
+@keyframes spin {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

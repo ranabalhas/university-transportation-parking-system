@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+<div id="toast" class="toast"></div>
+    <div class="auth-box">
+        <h2>Driver Login</h2>
+
+        <form action="/university_system/driver/driver_login.php"method="POST"autocomplete="off"id="loginForm">
+            <input type="text" name="driver_id" placeholder="Driver ID" autocomplete="off" required>
+            <div class="input-group">
+
+    <input type="password" id="driverPassword" name="password" placeholder="Enter your password" autocomplete="off" required>
+
+    <span class="toggle-password"
+          onclick="togglePassword('driverPassword', this)">
+
+        <i class="fa fa-eye"></i>
+
+    </span>
+
+</div>
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+		
+    </div>
+</div>
+
+<!-- LOADING SPINNER -->
+<div id="loadingSpinner" class="loading-overlay hidden">
+
+    <div class="spinner-box">
+
+        <div class="spinner"></div>
+
+        <p>Please wait...</p>
+
+    </div>
+
+</div>
+
+<script>
+
+function togglePassword(inputId, element) {
+
+    const input = document.getElementById(inputId);
+
+    const icon = element.querySelector("i");
+
+    if (input.type === "password") {
+
+        input.type = "text";
+
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+
+    } else {
+
+        input.type = "password";
+
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+    }
+}
+
+
+
+
+window.addEventListener("pageshow", function (event) {
+
+    // detect back/forward cache restore
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+	
+        window.location.reload();
+        
+    }
+
+    
+});
+
+window.onload = function () {
+
+    const error = new URLSearchParams(window.location.search).get("error");
+
+    if (error === "wrong") {
+        showToast("Wrong password");
+    }
+
+    if (error === "notfound") {
+        showToast("Driver not found");
+    }
+
+if (error === "empty") {
+    showToast("Please fill all fields");
+}
+    // clean URL (very important)
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname);
+    }
+};
+function showToast(message, type = "error") {
+
+    let toast = document.getElementById("toast");
+
+    toast.innerText = message;
+    toast.className = "toast show";
+
+    toast.style.background = (type === "success") ? "#22c55e" : "#ef4444";
+
+    setTimeout(() => {
+        toast.className = "toast";
+    }, 3000);
+}
+
+/* =========================
+   SHOW LOADING
+========================= */
+
+function showLoading(button = null, text = "Please wait...") {
+
+    document
+    .getElementById("loadingSpinner")
+    .classList
+    .remove("hidden");
+
+    if (button) {
+
+        button.disabled = true;
+
+        button.innerText = text;
+    }
+}
+
+/* =========================
+   LOGIN SUBMIT
+========================= */
+
+document
+.getElementById("loginForm")
+.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const button =
+    this.querySelector("button");
+
+    showLoading(button, "Logging in...");
+
+    setTimeout(() => {
+
+        this.submit();
+
+    }, 1000);
+
+});
+</script>
+</body>
+</html>
