@@ -22,7 +22,7 @@ try {
 
     $mail->Username = 'university.transport.system@gmail.com';
 
-    $mail->Password = 'etteghfqvuzgvkzr';
+    $mail->Password = '';
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
