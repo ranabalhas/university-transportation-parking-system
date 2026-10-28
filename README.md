@@ -84,5 +84,5 @@ This repository contains the project's source code. PHP and MySQL require a serv
 ![Admin Dashboard](sreenshots/admin_dashboard2.png)
 ![Admin Dashboard](sreenshots/admin_dashboard3.png)
 ![Admin Dashboard](sreenshots/driver_management.png)
-![Admin Dashboard](sreenshots/reports)
+![Admin Dashboard](sreenshots/reports.png)
 
