@@ -65,24 +65,24 @@ This repository contains the project's source code. PHP and MySQL require a serv
 ## Screenshots
 
 ### Homepage
-![Homepage](screenshots/homepage.png)
+![Homepage](sreenshots/homepage.png)
 
 ### Student Portal
-![Admin Dashboard](screenshots/student_portal.png)
+![Admin Dashboard](sreenshots/student_portal.png)
 
 ### Parking Subscription
-![Parking Subscription](screenshots/parking-subscription.png)
+![Parking Subscription](sreenshots/parking-subscription.png)
 
 ### Bus Recommendation
-![Bus Recommendation](screenshots/bus-recommendation.png)
+![Bus Recommendation](sreenshots/bus-recommendation.png)
 
 ### Bus Transportation
-![Bus Transportation](screenshots/bus-transportation.png)
+![Bus Transportation](sreenshots/bus-transportation.png)
 
 ### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
-![Admin Dashboard](screenshots/admin-dashboard2.png)
-![Admin Dashboard](screenshots/admin-dashboard3.png)
-![Admin Dashboard](screenshots/driver_management.png)
-![Admin Dashboard](screenshots/reports)
+![Admin Dashboard](sreenshots/admin-dashboard.png)
+![Admin Dashboard](sreenshots/admin-dashboard2.png)
+![Admin Dashboard](sreenshots/admin-dashboard3.png)
+![Admin Dashboard](sreenshots/driver_management.png)
+![Admin Dashboard](sreenshots/reports)
 
